@@ -1,5 +1,5 @@
 .App {
-  max-width: 1200px;
+  max-width: 1366px;
   margin: 0 auto;
   padding: 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
@@ -244,16 +244,22 @@
 
 .charts-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
   margin-top: 30px;
+  align-items: stretch;
 }
 
 .chart-section {
   background: white;
-  padding: 25px;
+  padding: 10px 5px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  max-width: 100%;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .chart-section h3 {
@@ -296,6 +302,13 @@
   background: #fcfcfc;
 }
 
+@media (max-width: 900px) {
+  .charts-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .charts-container {
     grid-template-columns: 1fr;
@@ -335,6 +348,76 @@
   }
   .format-table th, .format-table td {
     padding: 7px 4px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .App {
+    padding: 5px;
+    max-width: 100vw;
+  }
+  .app-header {
+    margin-bottom: 20px;
+  }
+  .file-upload {
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+  .upload-area {
+    padding: 10px;
+    border-radius: 6px;
+  }
+  .format-info {
+    max-width: 100%;
+    padding: 0 2px;
+  }
+  .format-table {
+    min-width: 0;
+    width: 100%;
+    font-size: 12px;
+  }
+  .format-table th, .format-table td {
+    padding: 5px 2px;
+    font-size: 12px;
+  }
+  .summary-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .card {
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+  }
+  .charts-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 15px;
+  }
+  .chart-section {
+    padding: 5px 0;
+    border-radius: 6px;
+    max-width: 100vw;
+    min-width: 0;
+  }
+  .top-categories {
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+  }
+  .category-item {
+    gap: 5px;
+    padding: 8px 0;
+  }
+  .improvements {
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+  }
+  .download-example-button {
+    padding: 8px 10px;
     font-size: 13px;
   }
 }
