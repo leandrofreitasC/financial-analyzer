@@ -1,46 +1,94 @@
-# Getting Started with Create React App
+# 📊 Analisador Financeiro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Uma aplicação web moderna para análise de dados financeiros pessoais, desenvolvida em React com TypeScript.
 
-## Available Scripts
+## 🚀 Funcionalidades
 
-In the project directory, you can run:
+- **Upload de Arquivos**: Suporte para arquivos Excel (.xlsx, .xls) e CSV
+- **Análise Automática**: Processamento automático de transações financeiras
+- **Dashboard Interativo**: Visualização de receitas, despesas e saldo
+- **Categorização**: Análise de gastos por categoria
+- **Gráficos Dinâmicos**: Visualizações interativas dos dados financeiros
+- **Arquivo de Exemplo**: Download de template para facilitar o uso
 
-### `npm start`
+## 📋 Formato de Arquivo Esperado
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A aplicação espera arquivos com as seguintes colunas:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+| Coluna | Descrição | Exemplo |
+|--------|-----------|---------|
+| **Data** | Data da transação (YYYY-MM-DD) | 2024-01-15 |
+| **Descrição** | Nome da transação | Salário Janeiro |
+| **Categoria** | Categoria da transação | Receitas, Alimentação |
+| **Valor** | Valor (positivo = receita, negativo = despesa) | 5000.00 ou -350.50 |
 
-### `npm test`
+## 🛠️ Como Usar
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Baixe o arquivo de exemplo**: Clique no botão "📥 Baixar Arquivo de Exemplo (CSV)"
+2. **Prepare seus dados**: Use o template como base para organizar suas transações
+3. **Faça upload**: Selecione seu arquivo Excel ou CSV
+4. **Analise**: Visualize os insights automáticos sobre suas finanças
 
-### `npm run build`
+## 🚀 Instalação e Execução
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Pré-requisitos
+- Node.js (versão 16 ou superior)
+- npm
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Instalação
+```bash
+# Clone o repositório
+git clone [url-do-repositorio]
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Entre no diretório
+cd financial-analyzer
 
-### `npm run eject`
+# Instale as dependências
+npm install --legacy-peer-deps
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Execução
+```bash
+# Inicie o servidor de desenvolvimento
+npm start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Acesse http://localhost:3000 no seu navegador
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 📦 Tecnologias Utilizadas
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **React 19** - Framework principal
+- **TypeScript** - Tipagem estática
+- **Recharts** - Biblioteca de gráficos
+- **read-excel-file** - Processamento de arquivos Excel
+- **PapaParse** - Processamento de arquivos CSV
+- **UUID** - Geração de IDs únicos
 
-## Learn More
+## 🎨 Características da Interface
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Design Responsivo**: Funciona em desktop e mobile
+- **Interface Intuitiva**: Fácil de usar para qualquer usuário
+- **Feedback Visual**: Indicadores claros de receitas e despesas
+- **Cores Significativas**: Verde para receitas, vermelho para despesas
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📊 Análises Disponíveis
+
+- **Resumo Financeiro**: Total de receitas, despesas e saldo
+- **Top Categorias**: Principais categorias de gastos
+- **Gráficos Temporais**: Evolução financeira ao longo do tempo
+- **Distribuição por Categoria**: Visualização em pizza dos gastos
+
+## 🔧 Scripts Disponíveis
+
+- `npm start` - Executa a aplicação em modo desenvolvimento
+- `npm test` - Executa os testes
+- `npm run build` - Gera build de produção
+- `npm run eject` - Ejetar configurações (irreversível)
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT.
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
